@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Banda Bookkeepers helps South African businesses keep reliable records, catch up overdue books and understand their monthly results."
+    >
+    <title>Bookkeeping for South African businesses | Banda Bookkeepers</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17352f;
+        --muted: #52645f;
+        --paper: #f7f8f3;
+        --white: #fff;
+        --green: #245c4b;
+        --lime: #d7ed9b;
+        --line: #dce4dc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page-shell {
+        width: min(1120px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 84px;
+      }
+
+      .brand {
+        font-size: 1.12rem;
+        font-weight: 750;
+        letter-spacing: -0.035em;
+        text-decoration: none;
+      }
+
+      .header-note {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+        gap: 64px;
+        align-items: center;
+        padding: 82px 0 96px;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: var(--green);
+        font-size: 0.78rem;
+        font-weight: 750;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 700px;
+        margin-bottom: 24px;
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        letter-spacing: -0.065em;
+        line-height: 1.02;
+      }
+
+      .hero-copy {
+        max-width: 640px;
+        color: var(--muted);
+        font-size: 1.12rem;
+      }
+
+      .hero-card {
+        padding: 32px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--white);
+        box-shadow: 0 20px 55px rgb(23 53 47 / 7%);
+      }
+
+      .hero-card h2 {
+        margin-bottom: 20px;
+        font-size: 1.15rem;
+      }
+
+      .hero-card ul {
+        display: grid;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .hero-card li {
+        display: flex;
+        gap: 12px;
+        align-items: baseline;
+        color: var(--muted);
+      }
+
+      .hero-card li::before {
+        color: var(--green);
+        content: "✓";
+        font-weight: 800;
+      }
+
+      .services {
+        padding: 76px 0 82px;
+        background: var(--white);
+      }
+
+      .section-heading {
+        max-width: 660px;
+        margin-bottom: 38px;
+      }
+
+      .section-heading h2 {
+        margin-bottom: 12px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.05em;
+        line-height: 1.1;
+      }
+
+      .section-heading p:last-child {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .service-card {
+        min-height: 220px;
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+      }
+
+      .service-number {
+        display: block;
+        margin-bottom: 24px;
+        color: var(--green);
+        font-size: 0.82rem;
+        font-weight: 750;
+      }
+
+      .service-card h3 {
+        margin-bottom: 9px;
+        font-size: 1.2rem;
+      }
+
+      .service-card p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      .approach {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 72px;
+        padding: 82px 0 92px;
+      }
+
+      .approach h2 {
+        margin-bottom: 0;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.05em;
+        line-height: 1.1;
+      }
+
+      .approach-copy {
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .approach-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .site-footer {
+        padding: 22px 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 760px) {
+        .hero,
+        .approach {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .hero {
+          padding: 54px 0 68px;
+        }
+
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .services {
+          padding: 60px 0;
+        }
+
+        .approach {
+          padding: 62px 0;
+        }
+
+        .header-note {
+          max-width: 150px;
+          text-align: right;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .page-shell {
+          width: min(100% - 32px, 1120px);
+        }
+
+        .hero-card {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-shell site-header">
+      <a class="brand" href="#home">Banda Bookkeepers</a>
+      <span class="header-note">Bookkeeping for South African businesses</span>
+    </header>
+
+    <main id="home">
+      <section class="page-shell hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Clear books. Better decisions.</p>
+          <h1 id="hero-title">Bookkeeping that keeps your business moving.</h1>
+          <p class="hero-copy">
+            Banda Bookkeepers helps business owners maintain reliable financial
+            records, bring overdue books up to date and understand their monthly
+            results. We turn bank statements, invoices and other business
+            records into organised accounts that support decisions and year-end
+            preparation.
+          </p>
+        </div>
+        <aside class="hero-card" aria-label="How we help">
+          <h2>Practical support for your books</h2>
+          <ul>
+            <li>Stay on top of monthly records</li>
+            <li>Get overdue bookkeeping back in order</li>
+            <li>Make sense of your monthly results</li>
+            <li>Prepare organised accounts for year-end</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="services" aria-labelledby="services-title">
+        <div class="page-shell">
+          <div class="section-heading">
+            <p class="eyebrow">Our bookkeeping services</p>
+            <h2 id="services-title">The essential work behind reliable records.</h2>
+            <p>
+              We focus on the bookkeeping your business needs each month, with
+              practical help to get your accounts organised and keep them that
+              way.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-number">01</span>
+              <h3>Record transactions</h3>
+              <p>
+                Turn bank statements, invoices and business records into
+                organised accounts.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-number">02</span>
+              <h3>Reconcile balances</h3>
+              <p>
+                Reconcile your balances and work through queries so your
+                records are reliable.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-number">03</span>
+              <h3>Prepare useful reports</h3>
+              <p>
+                Understand your monthly results with financial reports that
+                support business decisions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-shell approach" aria-labelledby="approach-title">
+        <div>
+          <p class="eyebrow">A steady, practical approach</p>
+          <h2 id="approach-title">Know where your business stands.</h2>
+        </div>
+        <div class="approach-copy">
+          <p>
+            Whether you need consistent monthly bookkeeping or help catching up
+            overdue records, we bring your financial information together in
+            organised accounts.
+          </p>
+          <p>
+            With reconciled balances and useful monthly reports, you can make
+            informed decisions and have better-prepared records for year-end.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell">Banda Bookkeepers · Bookkeeping for South African businesses</div>
+    </footer>
+  </body>
+</html>
